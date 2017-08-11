@@ -24,7 +24,7 @@ def permutations(string_arr)
   all_perms
 end
 
-# O(n) because execution time increases proportionally to size of string
+# O(n**2) because each loop checks the entire inside of the string. quite bad
 def second_anagram?(string1, string2)
   string1_arr = string1.split("")
   string2_arr = string2.split("")
@@ -41,7 +41,7 @@ def second_anagram?(string1, string2)
   str_1.empty? && string2_arr.empty?
 end
 
-# O(n) depends on the sort
+# n log(n) because the n of == is crushed
 def third_anagram?(string1, string2)
   string1.chars.sort == string2.chars.sort
 end
